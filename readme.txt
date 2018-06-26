@@ -1,1 +1,1 @@
-Cloud Resume to make the profile more presentable 
+Cloud resume to make the profile more presentable 
