@@ -67,7 +67,9 @@ def send_email():
 
     data = "*****************************************************\n\nList of Enquiry as on" + str(time.ctime())+"\n" +"Name is :  "+Name+"\n"+"\nEmail is : "+email+"\nSubject is : "+subject+"\nMessage is "+message+"====================================================="
 
-    kt.write(str(data))
+    # kt.write(str(data))
+    print data
+
     #
     # msg2= " New Enquiry   \n" \
     #       "Name = "+Name+"\nEMail = "+email+"\nMessage = "+message
