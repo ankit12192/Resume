@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74df2ebb-32a5-4f87-a439-6c63cd55ed45" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/c.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/profile-pic.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery-2.1.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/modernizr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/pace.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/plugins.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/styles/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/styles/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/styles/vendor.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/readme.txt" afterPath="" />
-    </list>
+    <list default="true" id="74df2ebb-32a5-4f87-a439-6c63cd55ed45" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
