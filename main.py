@@ -77,7 +77,7 @@ def send_email():
     message = request.form['contactMessage']
     kt = open("Enq.txt","a+")
 
-    data = "\n\n\n*****************************************************\n\nList of Enquiry as on" + str(time.ctime())+"\n" +"Name is :  "+Name+"\n"+"\nEmail is : "+email+"\nSubject is : "+subject+"\nMessage is "+message+"=====================================================\n\n\n"
+    data = "\n\n\n*****************************************************\n\nList of Enquiry as on" + str(time.ctime())+"\n" +"Name is :  "+Name+"\n"+"\nEmail is : "+email+"\nSubject is : "+subject+"\nMessage is "+message+"\n\n\n=====================================================\n\n\n"
 
     # kt.write(str(data))
     print data
