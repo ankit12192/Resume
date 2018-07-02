@@ -48,6 +48,18 @@ app = Flask(__name__)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 @app.route('/',methods=['GET','POST'])
 def my_form():
     # obj = Email()
@@ -65,7 +77,7 @@ def send_email():
     message = request.form['contactMessage']
     kt = open("Enq.txt","a+")
 
-    data = "*****************************************************\n\nList of Enquiry as on" + str(time.ctime())+"\n" +"Name is :  "+Name+"\n"+"\nEmail is : "+email+"\nSubject is : "+subject+"\nMessage is "+message+"====================================================="
+    data = "\n\n\n*****************************************************\n\nList of Enquiry as on" + str(time.ctime())+"\n" +"Name is :  "+Name+"\n"+"\nEmail is : "+email+"\nSubject is : "+subject+"\nMessage is "+message+"=====================================================\n\n\n"
 
     # kt.write(str(data))
     print data
