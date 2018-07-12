@@ -4,6 +4,127 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+<style> 
+.demo{ background: #f8f8f8; }
+.testimonial{
+    margin: 0 20px 40px;
+}
+.testimonial .testimonial-content{
+    padding: 35px 25px 35px 50px;
+    margin-bottom: 35px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    position: relative;
+}
+.testimonial .testimonial-content:after{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    bottom: -10px;
+    left: 22px;
+    transform: rotate(45deg);
+}
+.testimonial-content .testimonial-icon{
+    width: 50px;
+    height: 45px;
+    background: #ff4242;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    line-height: 42px;
+    position: absolute;
+    top: 37px;
+    left: -19px;
+}
+.testimonial-content .testimonial-icon:before{
+    content: "";
+    border-bottom: 16px solid #e41212;
+    border-left: 18px solid transparent;
+    position: absolute;
+    top: -16px;
+    left: 1px;
+}
+.testimonial .description{
+    font-size: 15px;
+    font-style: italic;
+    color: #8a8a8a;
+    line-height: 23px;
+    margin: 0;
+}
+.testimonial .title{
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #525252;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin: 0 0 5px 0;
+}
+.testimonial .post{
+    display: block;
+    font-size: 14px;
+    color: #ff4242;
+}
+.owl-theme .owl-controls{
+    margin-top: 20px;
+}
+.owl-theme .owl-controls .owl-page span{
+    background: #ccc;
+    opacity: 1;
+    transition: all 0.4s ease 0s;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+    background: #ff4242;
+}
+</style>
+
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#testimonial-slider").owlCarousel({
+        items:3,
+        itemsDesktop:[1000,3],
+        itemsDesktopSmall:[980,2],
+        itemsTablet:[768,2],
+        itemsMobile:[650,1],
+        pagination:true,
+        navigation:false,
+        slideSpeed:1000,
+        autoPlay:true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
@@ -18,9 +139,13 @@
  	<!-- CSS
    ================================================== -->
 
-	<link href=../static/styles/base.css rel=stylesheet>
-	<link href=../static/styles/main.css rel=stylesheet>
-	<link href=../static/styles/vendor.css rel=stylesheet>
+	<link href="../static/styles/base.css" rel=stylesheet>
+	<link href="../static/styles/main.css" rel=stylesheet>
+	<link href="../static/styles/vendor.css" rel=stylesheet>
+	<!--<link href="../static/styles/layout.css" rel="stylesheet">-->
+	
+	<link href="../static/styles/media-queries.css" rel="stylesheet">
+	
 
 
 
@@ -560,7 +685,14 @@ It used for generating email related test cases for developer and QA, I have use
 	   				<!--<div class="timeline-content">-->
 	   					<!--<h4>Design College</h4>-->
 	   					<!--<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>-->
-	   				<!--</div>-->
+	   				</div>
+
+
+
+
+	   			</div>
+	   			</div>
+	   			</div>
 
 
 
@@ -571,29 +703,17 @@ It used for generating email related test cases for developer and QA, I have use
 
 
 
+	   			</div> 
+   			</div> 
+
+   		</div>  
+
+   	</div> 
+
+	</section>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-	   			</div> <!-- /timeline-block -->
-
-   			</div> <!-- /timeline-wrap -->
-
-   		</div> <!-- /col-twelve -->
-
-   	</div> <!-- /resume-timeline -->
-
-	</section> <!-- /features -->
 
 
 
@@ -610,9 +730,9 @@ It used for generating email related test cases for developer and QA, I have use
    			<h5>Services</h5>
    			<h1>What Can I Do For You?</h1>
 
-   			<p class="lead">Looking for high quality and fast service? you can check out the services that I provide and I promise you wont look back </p>
+   			<p class="lead">Looking for high quality and fast service? you can check out the services that I provide and I promise you wont look back</p>
 
-   		</div>
+   		</div>   		
    	</div> <!-- /section-intro -->
 
    	<div class="row services-content">
@@ -625,10 +745,14 @@ It used for generating email related test cases for developer and QA, I have use
 
 	            <div class="service-content">	
 
-	            	 <h3>End to End testing </h3>
+	            	 <h3>Website Testing </h3>
 
-		            <p class="desc">If you are looking for shipping high-quality product then you are in luck, I can do this for you
-	         		</p>
+		            <!--<p class="desc">-->
+						<blockquote>
+						
+I was constantly paranoid about my website’s stability until I found Ankit who put me at ease right from the start. His intricate approach towards formation of test cases and their execution was brilliant. I’m quite surprised that he charges a very moderate fee for the kind of effort that he puts in his work. Thanks Ankit, I will be a regular customer for years to come.
+<p> — Utkarsh Singh </blockquote>
+					</p>
 	         		
 	         	</div> 	         	 
 
@@ -640,80 +764,99 @@ It used for generating email related test cases for developer and QA, I have use
 
 	            <div class="service-content">	
 
-	            	<h3>Digital Marketing </h3>
+	            	<h3>Digital Marketing</h3>  
 
-		            <p class="desc"> Your product taking baby steps? Let me help it fly...
+		            <p class="desc">
+						<blockquote>
+						I hired Ankit for social media marketing on a blog. I was extremely satisfied with his work. He was very professional, adjustable with the timings of my availability and delivered what he promised, and more importantly what I needed. He also shared his knowledge about certain tools with me. I'd definitely work with him again.
+						<p>
+							— Aiden Fields
 	         		</p>
 
 	            </div>	                          
 
 			   </div> <!-- /service -->
 
-			   <div class="service">
+			   <!--<div class="service">
 
 			   	<span class="icon"><i class="icon-paint-brush"></i></span>		            
 
 	            <div class="service-content">
 
-	            	<h3>Digital Footprint </h3>
+	            	<h3>Brand Awareness</h3>
 
-		            <p class="desc"> Want to make your product approachable? Why not approach me?
+		            <p class="desc">
+						<blockquote>
+							 ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
 	        			</p> 
 
-	            </div> 	            	               
+	            </div> 	            	               -->
 
-			   <!--</div> &lt;!&ndash; /service &ndash;&gt;-->
+			   <!--</div>  /service -->
 
-				<!--<div class="service">-->
+				<div class="service">
 
-					<!--<span class="icon"><i class="icon-toggles"></i></span>	              -->
+					<span class="icon"><i class="icon-toggles"></i></span>	              
 
-	            <!--<div class="service-content">-->
+	            <div class="service-content">
 
-	            	<!--<h3>UI/UX Design</h3>-->
+	            	<h3>Testing strategy</h3>
+						
+					
+		            <p class="desc">
+						<blockquote>Ankit has helped us set up and manage the testing infrastructure for our products. His entire approach was astute and the testing strategy was well developed by Ankit. He has always managed to stick to the deadlines and ensure product is shipped at the estimated timeline. 
+							<p>
+								— Jordan Romero
+						
+	         		</p> 
+	         		
+	            </div>                
 
-		            <!--<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.-->
-	         		<!--</p> -->
-	         		<!---->
-	            <!--</div>                -->
+				</div> <!-- /service -->
 
-				<!--</div> &lt;!&ndash; /service &ndash;&gt;-->
+			   <div class="service">
 
-			   <!--<div class="service">-->
+			   	<span class="icon"><i class="icon-image"></i></span>	            
 
-			   	<!--<span class="icon"><i class="icon-image"></i></span>	            -->
+	            <div class="service-content">
 
-	            <!--<div class="service-content">-->
+	            	<h3>End To End Automation</h3>
 
-	            	<!--<h3>Graphics Design</h3>-->
+		            <p class="desc">
+						<blockquote>
+					I have collaborated with Ankit on more than one occasion. Ankit has always delivered excellent work and on-time.I believe his heuristic approach towards automation,gives him an edge above the others.Apart from being great at automation he is also very comfortable to work with
+						<p>
+						— Daneil John 
+						</blockquote>
+	        			</p>
+						
+						
 
-		            <!--<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.-->
-	        			<!--</p> -->
+	            </div>	               
 
-	            <!--</div>	               -->
+			   </div> <!-- /service -->
 
-			   <!--</div> &lt;!&ndash; /service &ndash;&gt;-->
+			   <!--<div class="service">
 
-			   <!--<div class="service">-->
+			   	<span class="icon"><i class="icon-chat"></i></span>	   	           
 
-			   	<!--<span class="icon"><i class="icon-chat"></i></span>	   	           -->
+	            <div class="service-content">
 
-	            <!--<div class="service-content">-->
+	            	 <h3>Consultancy</h3>
 
-	            	 <!--<h3>Consultancy</h3>-->
+		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+	        			</p> 
+	        			
+	            </div>	               -->
 
-		            <!--<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.-->
-	        			<!--</p> -->
-	        			<!---->
-	            <!--</div>	               -->
-
-			   <!--</div> &lt;!&ndash; /service &ndash;&gt;-->
+			   <!--</div>  /service -->
 
 	      </div> <!-- /services-list -->
    		
    	</div> <!-- /services-content -->
 		
-	</section> <!-- /services -->	
+	</section> <!-- /services -->
+
 
 
 	<!-- stats Section
@@ -829,7 +972,7 @@ It used for generating email related test cases for developer and QA, I have use
 	</section> <!-- /stats -->
 
 	
-   <!-- contact
+    <!--contact
    ================================================== -->
 	<section id="contact">
 
@@ -842,31 +985,55 @@ It used for generating email related test cases for developer and QA, I have use
    			<p class="lead">Need more information about me? Drop a meessage and I will get back to you </p>
 
    		</div> 
-   	</div> <!-- /section-intro -->
+   	</div> 
 
    	<div class="row contact-form">
 
    		<div class="col-twelve">
 
-            <!-- form -->
-            <form name="contactForm" id="" method="post" action="/mail">
+
+			<!--contactForm-->
+  <form name="contactForm" id="" method="post" action="/mail">
       			<fieldset>
 
                   <div class="form-field">
- 						   <input name="contactName" type="text" id="contactName" placeholder="Name"  minlength="2" required="">
+ 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
                   </div>
                   <div class="form-field">
-	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email"  required="">
+	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
 	               </div>
                   <div class="form-field">
-	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject">
+	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
 	               </div>                       
                   <div class="form-field">
 	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
 	               </div>                      
                  <div class="form-field">
                      <button class="submitform">Submit</button>
-                              </div> <!-- /col-twelve -->
+                     <div id="submit-loader">
+                        <div class="text-loader">Sending...</div>                             
+       				      <div class="s-loader">
+								  	<div class="bounce1"></div>
+								  	<div class="bounce2"></div>
+								  	<div class="bounce3"></div>
+								</div>
+							</div>
+                  </div>
+
+      			</fieldset>
+      		</form> <!-- Form End -->
+
+			<p></p>
+
+
+
+
+<!--<br>
+<h5> Contact Me </h5>
+<center>-->
+	
+	<!--<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfTz-dPA9_FbnwVC83ftgAKHKcGkeDC0h6-upzeQlfIovpwAA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>-->
+							  
    		
    	</div> <!-- /contact-form -->
 
@@ -925,6 +1092,34 @@ It used for generating email related test cases for developer and QA, I have use
    <script src="../static/js/jquery-2.1.3.min.js"></script>
    <script src="../static/js/plugins.js"></script>
    <script src="../static/js/main.js"></script>
+
+<!--
+   <script src="../static/js/jquery.flexslider.js"></script>
+   <script src="../static/js/waypoints.js"></script>
+
+   <script src="../static/js/jquery.fittext.js"></script>
+
+
+   <script src="../static/js/magnific-popup.js"></script>
+
+   <script src="../static/js/init.js"></script>-->
+
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 

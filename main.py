@@ -50,32 +50,37 @@ app = Flask(__name__)
 
 
 
-
-
-
-
-
-
-
-
-
-
 @app.route('/',methods=['GET','POST'])
 def my_form():
-    # obj = Email()
-    # obj.send_emails_attachment()
+
     return render_template("index.html")
+
+
+
+@app.route('/suc',methods=['GET','POST'])
+def suc_o():
+    return render_template("thankyou.html")
+
+
+
 
 
 @app.route('/mail',methods=['POST'])
 def send_email():
+
+    #
+    # obj = Email()
+    # obj.send_emails_attachment()
 
 
     Name = request.form['contactName']
     email = request.form['contactEmail']
     subject = request.form['contactSubject']
     message = request.form['contactMessage']
-    kt = open("Enq.txt","a+")
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login('atp12192@gmail.com', 'Ankrich5063')
+    # kt = open("Enq.txt","a+")
 
     data = "\n\n\n*****************************************************\n\nList of Enquiry as on" + str(time.ctime())+"\n" +"Name is :  "+Name+"\n"+"\nEmail is : "+email+"\nSubject is : "+subject+"\nMessage is "+message+"\n\n\n=====================================================\n\n\n"
 
@@ -83,16 +88,20 @@ def send_email():
     print data
 
     #
-    # msg2= " New Enquiry   \n" \
-    #       "Name = "+Name+"\nEMail = "+email+"\nMessage = "+message
+    # msg2= "New Enquiry\n" \
+    #       "Name = "+Name+"\nEMail = "+email+"\nMessage = "+message+"\nSubject = "+subject
+
+    message = """From: """ + "Ankut <ank9222@gmail.com>" + """ \nTo: """ + "ankit.tiwari12192@gmail.com" + """ \nSubject: """ + subject + """\n\n """ + data + """"""
+
     # msg['Subject'] = subject
     # msg['From']="atp12192@gmail.com"
     # msg['To']="ankit.tiwari12192@gmail.com"
-    # body = msg2
-    #
+    # body = msg
+
     # msg.attach(MIMEText(body, 'plain'))
     # text = msg.as_string()
-    # server.sendmail("atp12192@gmal.com","ankit.tiwari12192@gmail.com", text)
+
+    server.sendmail("atp12192@gmal.com","ankit.tiwari12192@gmail.com", message)
 
 
     return render_template("thankyou.html",value=Name)

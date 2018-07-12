@@ -219,8 +219,59 @@
 	/* local validation */
 	$('#contactForm').validate({
 
+		/* submit via ajax */
+		submitHandler: function(form) {
+
+			var sLoader = $('#submit-loader');
+
+			$.ajax({      	
+
+		      type: "POST",
+		      url: "/mail",
+
+		      data: $(form).serialize(),
+		      beforeSend: function() { 
+
+		      	sLoader.fadeIn(); 
+
+		      },
+		      success: function(msg) {
+
+		      url:"/thankyou.html"
+
+	            // Message was sen
+	            if (msg == 'OK') {
+	            	sLoader.fadeOut();
+
+	               $('#message-warning').hide();
+	               $('#contactForm').fadeOut();
 
 
+	               $('#message-success').fadeIn();
+	               $('#contactForm').reset()
+	            }
+	            // There was an error
+	            else {
+	            	sLoader.fadeOut(); 
+	               $('#message-warning').html(msg);
+		            $('#message-warning').fadeIn();
+	            }
+
+		      },
+		      error: function() {
+
+		      	sLoader.fadeOut(); 
+		      	$('#message-warning').html("Something went wrong. Please try again.");
+		         $('#message-warning').fadeIn();
+
+		      }
+
+	      });     		
+  		}
+
+	});
+
+		      alert("sasasa")
 
  	/*----------------------------------------------------- */
   	/* Back to top
@@ -244,77 +295,5 @@
 		}		
 
 	});		
-
-
-
-
-
-
-
-  	/*---------------------------------------------------- */
-	/*	contact form
-	------------------------------------------------------ */
-
-	/* local validation */
-	$('#contactForm').validate({
-
-		/* submit via ajax */
-		submitHandler: function(form) {
-
-			var sLoader = $('#submit-loader');
-
-			$.ajax({
-
-		      success: function(msg) {
-
-	            // Message was sent
-	            if (msg == 'OK') {
-	            	sLoader.fadeOut();
-	               $('#message-warning').hide();
-	               $('#contactForm').fadeOut();
-	               $('#message-success').fadeIn();
-	            }
-	            // There was an error
-	            else {
-	            	sLoader.fadeOut();
-	               $('#message-warning').html(msg);
-		            $('#message-warning').fadeIn();
-	            }
-
-		      },
-		      error: function() {
-
-		      	sLoader.fadeOut();
-		      	$('#message-warning').html("Something went wrong. Please try again.");
-		         $('#message-warning').fadeIn();
-
-		      }
-
-	      });
-  		}
-
-	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 })(jQuery);
