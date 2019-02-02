@@ -24,8 +24,8 @@ def send_email():
     server.login('atp12192@gmail.com', 'Ankrich5063')
     data = "\n\n\n*****************************************************\n\nList of Enquiry as on" + str(time.ctime())+"\n" +"Name is :  "+Name+"\n"+"\nEmail is : "+email+"\nSubject is : "+subject+"\nMessage is "+message+"\n\n\n=====================================================\n\n\n"
     print data
-    message = """From: """ + "Ankut <ank9222@gmail.com>" + """ \nTo: """ + "ankit.tiwari12192@gmail.com" + """ \nSubject: """ + subject + """\n\n """ + data + """"""
-    server.sendmail("atp12192@gmal.com","ankit.tiwari12192@gmail.com", message)
+    message = """From: """ + "Ankut <ank9222@gmail.com>" + """ \nTo: """ + "mail@ankitt.com" + """ \nSubject: """ + subject + """\n\n """ + data + """"""
+    server.sendmail("atp12192@gmal.com","mail@ankitt.com", message)
     return render_template("thankyou.html",value=Name)
 
 
