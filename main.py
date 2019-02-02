@@ -21,7 +21,7 @@ def send_email():
     message = request.form['contactMessage']
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login('atp12192@gmail.com', 'Ankrich5063')
+    server.login('atp12192@gmail.com', 'Ankitricha5063')
     data = "\n\n\n*****************************************************\n\nList of Enquiry as on" + str(time.ctime())+"\n" +"Name is :  "+Name+"\n"+"\nEmail is : "+email+"\nSubject is : "+subject+"\nMessage is "+message+"\n\n\n=====================================================\n\n\n"
     print data
     message = """From: """ + "Ankut <ank9222@gmail.com>" + """ \nTo: """ + "mail@ankitt.com" + """ \nSubject: """ + subject + """\n\n """ + data + """"""
