@@ -21,9 +21,9 @@ def send_email():
     message = request.form['contactMessage']
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login('atp12192@gmail.com', 'Ankitricha5063')
+    server.login('atp12192@gmail.com', 'Tiwari12192')
     data = "\n\n\n*****************************************************\n\nList of Enquiry as on" + str(time.ctime())+"\n" +"Name is :  "+Name+"\n"+"\nEmail is : "+email+"\nSubject is : "+subject+"\nMessage is "+message+"\n\n\n=====================================================\n\n\n"
-    print data
+    print (data)
     message = """From: """ + "Ankut <ank9222@gmail.com>" + """ \nTo: """ + "mail@ankitt.com" + """ \nSubject: """ + subject + """\n\n """ + data + """"""
     server.sendmail("atp12192@gmal.com","mail@ankitt.com", message)
     return render_template("thankyou.html",value=Name)
@@ -32,4 +32,4 @@ def send_email():
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=False)
+    app.run( port=port, debug=False)
